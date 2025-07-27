@@ -7,11 +7,55 @@ using namespace std;
 
 
 // variables
-vector<vector<string>> decks = { {"King of Hearts", "Queen of Clubs", "Eight of Spade", "Jack of Aces", "Ten of Aces", "Jack of Spades"}, {"Queen of Hearts", "King of Clubs", "Nine of Spade", "Jack of Hearts", "Two of Aces", "Jack of Clubs"} };
-vector<string> deckNames = {"standart", "second"};
+vector<vector<string>> decks = { 
+{
+		"Fleshy Overgrowth", "Fleshy Overgrowth",
+		"Hemotology",
+		"Faultlines",
+		"Power Overwhealming", "Power Overwhealming",
+		"Sunfall",
+		"Scent Of Blood",
+		"Unkillable", "Unkillable", "Unkillable",
+		"Hirearchy",
+		"Abyssal Strain", "Abyssal Strain", "Abyssal Strain",
+		"Harvesters", "Harvesters",
+		"Harrow",
+		"Exhumed Cards",
+		"Shadows",
+		"Twilight",
+		"Crosswired",
+		"Heartless Man", "Heartless Man",
+		"Rot Flower", "Rot Flower",
+		"Brutality Cross",
+		"Dozers", "Dozers", "Dozers",
+		"Unity",
+		"Restless",
+		"Paleknight", "Paleknight",
+		"Weakened",
+		"Convergent", "Convergent",
+		"Divergent", "Divergent",
+		"Seams", "Seams", "Seams",
+		"Penance", "Penance" "Penance",
+		"The Sick", "The Sick", "The Sick",
+		"Stuffed Toy", 
+		"Twisted Mirror",
+		"Help From Down Below",
+		"Watchful Eye",
+		"Dark Gods Rejoice"
+
+}, 
+
+{"Queen of Hearts", 
+"King of Clubs", 
+"Nine of Spade", 
+"Jack of Hearts", 
+"Two of Aces", 
+"Jack of Clubs"} };
+
+vector<string> deckNames = {"Eclipse", "Soulless"};
 int currentDeck = 0;
 
-string helpText = "Info:\n  This is a card deck shuffler and puller, must input a deck of cards as a text file. In the format of ''Card1 Count, Card2 Count''.\n  Write Clear to clear the screen.\n  Write Shuffle to Shuffle current Deck or Shuffle Cut to shuffle cut the current Deck.\n  Write Select and Deck Name to Select another Deck Name.\n  Write ADD DECK to add another Deck.\n  Write Pull to Pull a card or write pull and a number to pull a number of cards.\n  Write Peak to look at a card or write Peak and a number to look at a number of cards.\n  Write Print to print out the entire Deck of cards.\n  Write Swtich and a Deck name to switch to that deck.\n  Write Help to see this help menu again.\n";
+string helpText = "Info:\n  This is a card deck shuffler and drawer, must input a deck of cards as a text file. In the format of ''Card1 Count, Card2 Count''.\n  Write Clear to clear the screen.\n  Write Shuffle to Shuffle current Deck or Shuffle Cut to shuffle cut the current Deck.\n  Write Select and Deck Name to Select another Deck Name.\n  Write ADD DECK to add another Deck.\n  Write Draw to Draw a card or write draw and a number to draw a number of cards.\n  Write Peak to look at a card or write Peak and a number to look at a number of cards.\n  Write Print to print out the entire Deck of cards.\n  Write Swtich and a Deck name to switch to that deck.\n  Write Help to see this help menu again.\n";
 
 
 
@@ -60,19 +104,19 @@ string ParseInput(string input)
 		}
 	}
 
-	if (parsedInput.at(0) == "clear")
+	if (parsedInput.at(0) == "clear" || parsedInput.at(0) == "Clear")
 	{
 		system("CLS");
 		return "";
 	}
-	else if (parsedInput.at(0) == "help")
+	else if (parsedInput.at(0) == "help" || parsedInput.at(0) == "Help")
 	{
 		return "\u001b[2m" + helpText + "\u001b[0m";
 	}
-	else if (parsedInput.at(0) == "pull")
+	else if (parsedInput.at(0) == "draw" || parsedInput.at(0) == "Draw")
 	{
 		string cards;
-		int toPull = 1;
+		int toDraw = 1;
 		if (parsedInput.size() > 1)
 		{
 			bool hasNumber = false;
@@ -97,7 +141,7 @@ string ParseInput(string input)
 				}
 				else
 				{
-					toPull = stoi(parsedInput.at(1));
+					toDraw = stoi(parsedInput.at(1));
 				}
 
 			}
@@ -112,20 +156,20 @@ string ParseInput(string input)
 			}
 		}	
 
-		for (int i = 0; i < toPull; i++)
+		for (int i = 0; i < toDraw; i++)
 		{
 			cards += decks.at(currentDeck).at(0);
 			decks.at(currentDeck).push_back(decks.at(currentDeck).at(0));
 			decks.at(currentDeck).erase(decks.at(currentDeck).begin());
-			if (i < toPull - 1)
+			if (i < toDraw - 1)
 			{
 				cards += ", ";
 			}
 		}
 
-		string pulledCard;
-		pulledCard += "Card: " + cards + "\n";
-		return pulledCard;
+		string drawnCard;
+		drawnCard += "Card: " + cards + "\n";
+		return drawnCard;
 	}
 	else if (parsedInput.at(0) == "switch" && parsedInput.size() > 1)
 	{
@@ -140,7 +184,7 @@ string ParseInput(string input)
 
 		return "No Deck of matching name found\n";
 	}
-	else if (parsedInput.at(0) == "print")
+	else if (parsedInput.at(0) == "print" || parsedInput.at(0) == "Print")
 	{
 		string cards;
 		for (int i = 0; i < decks.at(currentDeck).size(); i++)
@@ -156,7 +200,7 @@ string ParseInput(string input)
 		fullDeck += "Deck: " + cards + "\n";
 		return fullDeck;
 	}
-	else if (parsedInput.at(0) == "peak")
+	else if (parsedInput.at(0) == "peak" || parsedInput.at(0) == "Peak")
 	{
 		string cards;
 		int toPull = 1;
@@ -213,7 +257,7 @@ string ParseInput(string input)
 		pulledCard += "Peak Cards: " + cards + "\n";
 		return pulledCard;
 	}
-	else if (parsedInput.at(0) == "shuffle")
+	else if (parsedInput.at(0) == "shuffle" || parsedInput.at(0) == "Shuffle")
 	{
 		if (parsedInput.size() > 1)
 		{
@@ -240,6 +284,15 @@ string ParseInput(string input)
 			shuffled += "\n";
 			return shuffled;
 		}
+	}
+	else if (parsedInput.at(0) == "count" || parsedInput.at(0) == "Count")
+	{
+		string shuffled;
+		shuffled += "\u001b[32m";
+		shuffled += "Count: " + std::to_string(decks[currentDeck].size());
+		shuffled += "\u001b[37m";
+		shuffled += "\n";
+		return shuffled;
 	}
 	else
 	{

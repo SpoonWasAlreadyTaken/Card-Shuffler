@@ -1,4 +1,4 @@
 ﻿  CardShuffler.cpp
-C:\Users\PREDATOR\Documents\GitHub\Card-Shuffler\CardShuffler\CardShuffler\CardShuffler.cpp(267,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\PREDATOR\Documents\GitHub\Card-Shuffler\CardShuffler\CardShuffler\CardShuffler.cpp(254,1): warning C4715: 'ParseInput': not all control paths return a value
-  CardShuffler.vcxproj -> C:\Users\PREDATOR\Documents\GitHub\Card-Shuffler\CardShuffler\x64\Debug\CardShuffler.exe
+C:\Users\Spoon\Documents\GitHub\Card-Shuffler\CardShuffler\CardShuffler\CardShuffler.cpp(320,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Spoon\Documents\GitHub\Card-Shuffler\CardShuffler\CardShuffler\CardShuffler.cpp(307,1): warning C4715: 'ParseInput': not all control paths return a value
+  CardShuffler.vcxproj -> C:\Users\Spoon\Documents\GitHub\Card-Shuffler\CardShuffler\x64\Debug\CardShuffler.exe

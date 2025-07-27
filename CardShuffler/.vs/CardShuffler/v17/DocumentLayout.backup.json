@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PREDATOR\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\",
+  "WorkspaceRootPath": "C:\\Users\\Spoon\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8FE40295-6C23-4757-A8DE-7AD783BB8E45}|CardShuffler\\CardShuffler.vcxproj|C:\\Users\\PREDATOR\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{8FE40295-6C23-4757-A8DE-7AD783BB8E45}|CardShuffler\\CardShuffler.vcxproj|C:\\Users\\Spoon\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8FE40295-6C23-4757-A8DE-7AD783BB8E45}|CardShuffler\\CardShuffler.vcxproj|solutionrelative:CardShuffler\\CardShuffler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CardShuffler.cpp",
-              "DocumentMoniker": "C:\\Users\\PREDATOR\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp",
+              "DocumentMoniker": "C:\\Users\\Spoon\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp",
               "RelativeDocumentMoniker": "CardShuffler\\CardShuffler.cpp",
-              "ToolTip": "C:\\Users\\PREDATOR\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp",
+              "ToolTip": "C:\\Users\\Spoon\\Documents\\GitHub\\Card-Shuffler\\CardShuffler\\CardShuffler\\CardShuffler.cpp",
               "RelativeToolTip": "CardShuffler\\CardShuffler.cpp",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwA0AAACBAQAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-03T19:44:44.496Z",
               "EditorCaption": ""
